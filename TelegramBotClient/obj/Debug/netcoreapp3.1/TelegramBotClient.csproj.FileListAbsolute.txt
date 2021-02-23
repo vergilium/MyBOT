@@ -1,0 +1,9 @@
+C:\Users\vergilium\source\repos\MyBOT\TelegramBotClient\obj\Debug\netcoreapp3.1\TelegramBotClient.csprojAssemblyReference.cache
+C:\Users\vergilium\source\repos\MyBOT\TelegramBotClient\obj\Debug\netcoreapp3.1\TelegramBotClient.AssemblyInfoInputs.cache
+C:\Users\vergilium\source\repos\MyBOT\TelegramBotClient\obj\Debug\netcoreapp3.1\TelegramBotClient.AssemblyInfo.cs
+C:\Users\vergilium\source\repos\MyBOT\TelegramBotClient\obj\Debug\netcoreapp3.1\TelegramBotClient.csproj.CoreCompileInputs.cache
+C:\Users\vergilium\source\repos\MyBOT\TelegramBotClient\bin\Debug\netcoreapp3.1\TelegramBotClient.deps.json
+C:\Users\vergilium\source\repos\MyBOT\TelegramBotClient\bin\Debug\netcoreapp3.1\TelegramBotClient.dll
+C:\Users\vergilium\source\repos\MyBOT\TelegramBotClient\bin\Debug\netcoreapp3.1\TelegramBotClient.pdb
+C:\Users\vergilium\source\repos\MyBOT\TelegramBotClient\obj\Debug\netcoreapp3.1\TelegramBotClient.dll
+C:\Users\vergilium\source\repos\MyBOT\TelegramBotClient\obj\Debug\netcoreapp3.1\TelegramBotClient.pdb
