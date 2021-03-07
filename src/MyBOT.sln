@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyBOT", "MyBOT\MyBOT.csproj", "{0F9F7D5D-1002-4C73-A450-8F91E15F62D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BotClients", "BotClients", "{78A99FD7-5938-4CCF-925E-900C3D4B8253}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelebotClient", "Infrastructure\BotClients\TelegramBotClient\TelebotClient.csproj", "{AB937738-73AB-40BE-80E1-7C107F81A26B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViberbotClient", "Infrastructure\BotClients\ViberbotClient\ViberbotClient.csproj", "{5A27DCC5-6023-4E99-AF28-4772D1ADB290}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{55E9FEBC-6569-4E01-ABF5-D635B14C8078}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keyboard", "Infrastructure\Keyboard\Keyboard.csproj", "{6142B50C-3E61-4CD0-80A2-2CF5FC837FFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F9F7D5D-1002-4C73-A450-8F91E15F62D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F9F7D5D-1002-4C73-A450-8F91E15F62D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F9F7D5D-1002-4C73-A450-8F91E15F62D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F9F7D5D-1002-4C73-A450-8F91E15F62D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB937738-73AB-40BE-80E1-7C107F81A26B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB937738-73AB-40BE-80E1-7C107F81A26B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB937738-73AB-40BE-80E1-7C107F81A26B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB937738-73AB-40BE-80E1-7C107F81A26B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A27DCC5-6023-4E99-AF28-4772D1ADB290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A27DCC5-6023-4E99-AF28-4772D1ADB290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A27DCC5-6023-4E99-AF28-4772D1ADB290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A27DCC5-6023-4E99-AF28-4772D1ADB290}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6142B50C-3E61-4CD0-80A2-2CF5FC837FFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6142B50C-3E61-4CD0-80A2-2CF5FC837FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6142B50C-3E61-4CD0-80A2-2CF5FC837FFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6142B50C-3E61-4CD0-80A2-2CF5FC837FFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{78A99FD7-5938-4CCF-925E-900C3D4B8253} = {55E9FEBC-6569-4E01-ABF5-D635B14C8078}
+		{AB937738-73AB-40BE-80E1-7C107F81A26B} = {78A99FD7-5938-4CCF-925E-900C3D4B8253}
+		{5A27DCC5-6023-4E99-AF28-4772D1ADB290} = {78A99FD7-5938-4CCF-925E-900C3D4B8253}
+		{6142B50C-3E61-4CD0-80A2-2CF5FC837FFE} = {55E9FEBC-6569-4E01-ABF5-D635B14C8078}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {696C9236-3591-4371-A8D8-9A8325A17E72}
+	EndGlobalSection
+EndGlobal
