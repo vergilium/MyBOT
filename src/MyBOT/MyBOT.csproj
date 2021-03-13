@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure\BotClients\TelegramBotClient\TelebotClient.csproj" />
     <ProjectReference Include="..\Infrastructure\BotClients\ViberbotClient\ViberbotClient.csproj" />
+    <ProjectReference Include="..\Infrastructure\Keyboard\Keyboard.csproj" />
   </ItemGroup>
 
 </Project>

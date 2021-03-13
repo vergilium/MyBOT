@@ -5,8 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
+using Keyboard.TgmKeyboard;
 using Telegram.Bot;
 using Telegram.Bot.Types;
+using Telegram.Bot.Types.Enums;
+using Telegram.Bot.Types.ReplyMarkups;
 using TelegramAPI;
 
 namespace MyBOT.Controllers {
@@ -19,9 +22,9 @@ namespace MyBOT.Controllers {
 		}
 
 		[HttpPost]
-		[Route(@"/api/message/update")] //webhook uri part
+		[Route(@"/api/telegram/update")] //webhook uri part
 		[Consumes(MediaTypeNames.Application.Json)]
-		public IActionResult update([FromBody]Update update) {
+		public async Task<IActionResult> update([FromBody]Update update) {
 			try {
 				if (update == null) {
 					Console.WriteLine("Update message is null");
@@ -32,6 +35,10 @@ namespace MyBOT.Controllers {
 				if (message != null) {
 					Console.WriteLine(message);
 				}
+
+				await _client.SendTextMessageAsync(chatId:update.Message.Chat.Id, text:"Hello",
+					replyMarkup: new ReplyKeyboardMarkup(new TgmKbButton("Hello1", isContact:true)));
+				
 				return StatusCode(StatusCodes.Status200OK);
 #pragma warning disable CS0168 // Variable is declared but never used
 			} catch (Exception ex) {
