@@ -18,7 +18,7 @@ namespace MyBOT.Controllers {
 		private readonly ITelegramBotClient _client;
 
 		public TelegramController(TelebotClient client) {
-			_client = client.client;
+			_client = client.Client;
 		}
 
 		[HttpPost]
@@ -37,7 +37,7 @@ namespace MyBOT.Controllers {
 				}
 
 				await _client.SendTextMessageAsync(chatId:update.Message.Chat.Id, text:"Hello",
-					replyMarkup: new ReplyKeyboardMarkup(new TgmKbButton("Hello1", isContact:true)));
+					replyMarkup: new InlineKeyboardMarkup(InlineKeyboardButton.WithCallbackData("Hello", "helloCallback")));
 				
 				return StatusCode(StatusCodes.Status200OK);
 #pragma warning disable CS0168 // Variable is declared but never used
