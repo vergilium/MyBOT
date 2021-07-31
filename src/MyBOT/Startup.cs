@@ -29,6 +29,8 @@ namespace MyBOT {
 
 			services.Configure<ViberAPI.BotSettings>(Configuration.GetSection(ViberAPI.BotSettings.botOptions));
 			services.AddViberbotService();
+			
+			services.AddBotSession();
 
 			services.AddControllers()
 				.AddNewtonsoftJson();
@@ -41,7 +43,6 @@ namespace MyBOT {
 			}
 
 			app.UseRouting();
-
 			//app.UseAuthorization();
 
 			app.UseEndpoints(endpoints => {

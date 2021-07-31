@@ -19,8 +19,8 @@ namespace Keyboard.TgmKeyboard {
                 throw new ArgumentException("Error parameters isContact or isLocation. They can`t be all true");
             }
             if (isContact || isLocation) {
-                this.RequestContact = isContact;
-                this.RequestLocation = isLocation;
+                //this.RequestContact = isContact;
+                //this.RequestLocation = isLocation;
                 this.type = isContact ? TgmBtnType.BTN_PHONE : TgmBtnType.BTN_LOCATION;
             } else {
                 this.type = TgmBtnType.BUTTON;

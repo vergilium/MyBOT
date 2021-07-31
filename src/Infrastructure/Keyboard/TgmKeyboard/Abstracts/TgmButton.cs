@@ -4,7 +4,8 @@ using Telegram.Bot.Types.ReplyMarkups;
 
 // ReSharper disable once CheckNamespace
 namespace Keyboard.TgmKeyboard {
-    public abstract class TgmButton: KeyboardButton, ITgmButton {
+    public abstract class TgmButton: // KeyboardButton,
+                                     ITgmButton {
         [JsonIgnore]
         public ushort col{ get; set; }
         [JsonIgnore]
