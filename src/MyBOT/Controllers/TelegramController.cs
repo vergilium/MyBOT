@@ -42,8 +42,8 @@ namespace MyBOT.Controllers {
 					Console.WriteLine(message);
 				}
 
-				await _client.SendTextMessageAsync(chatId:update?.Message.Chat.Id, text:"Hello",
-					replyMarkup: new InlineKeyboardMarkup(InlineKeyboardButton.WithCallbackData("Hello", "helloCallback")));
+				await _client.SendTextMessageAsync(chatId: update?.Message.Chat.Id, text: "Hello",
+					replyMarkup: new ReplyKeyboardMarkup(new KeyboardButton("hello")));//new InlineKeyboardMarkup(InlineKeyboardButton.WithCallbackData("Hello", "helloCallback")));
 				
 				return StatusCode(StatusCodes.Status200OK);
 #pragma warning disable CS0168 // Variable is declared but never used

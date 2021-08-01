@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="menu.xsd"
+      
+      name="MainKeyboard"
+      scope="Singleton" >
+    
+    <button
+            text="My Data"
+            type="Button"
+            emoji=""
+            column="0"
+            row="0"
+            action=""
+            style="mainBtn"
+    />
+    <button
+            text="Information"
+    />
+    
+</menu>

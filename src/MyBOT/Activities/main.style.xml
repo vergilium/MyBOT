@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<buttonStyle name="mainBtn"
+        color="default"
+        beckground=""
+        bg_scale=""
+        img_scale=""
+        bg_loop=""
+        img=""
+        txt_valign=""
+        txt_halign=""
+        txt_opacity=""
+        txt_size=""
+/>

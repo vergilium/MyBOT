@@ -7,11 +7,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using MyBOT.Activities;
 
 
 namespace MyBOT {
 	public static class Program {
 		public static void Main(string[] args) {
+			
+			MainMenu_activity main = new MainMenu_activity();
+			main.Parse();
+			main.GetKeyboard();
 			CreateHostBuilder(args).Build().Run();
 		}
 
