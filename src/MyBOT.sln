@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViberbotClient", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{55E9FEBC-6569-4E01-ABF5-D635B14C8078}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keyboard", "Infrastructure\Keyboard\Keyboard.csproj", "{6142B50C-3E61-4CD0-80A2-2CF5FC837FFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Activities", "Infrastructure\Activities\Activities.csproj", "{6142B50C-3E61-4CD0-80A2-2CF5FC837FFE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{0C5E0D90-B252-4262-96A2-3662C452B2D4}"
 EndProject

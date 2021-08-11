@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Keyboard.Const;
 
 namespace DB.Entities {
 	public class Button : DbEntity {
@@ -32,7 +33,7 @@ namespace DB.Entities {
 
 		///<value>button type</value>
 		[Column("media_type")]
-		public BtnMediaType MediaType { get; set; }
+		public string MediaType { get; set; }
 
 		///<value>background media (Viber only)</value>
 		[Column("bg_media")]

@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
+using Keyboard.Factories.Generic;
 using Viber.Bot;
 using ViberAPI;
+using Keyboard = Viber.Bot.Keyboard;
 
 namespace MyBOT.Controllers {
 	[Route("/api/[controller]")]
@@ -38,24 +40,19 @@ namespace MyBOT.Controllers {
                     str = mess.Text;
                     break;
                 }
-                default: break;
+                default: return NoContent();
             }
 
-            // you should to control required fields
-            var message = new TextMessage() {
-                //required
-                Receiver = update.Sender.Id,
-                Sender = new Viber.Bot.User() {
-                    //required
-                    Name = "Our bot",
-                    Avatar = "http://dl-media.viber.com/1/share/2/long/bots/generic-avatar%402x.png"
-                },
-                //required
-                Text = str
-            };
+            var activity = new Activity(new MainMenuViberFactory());
 
-            // our bot returns incoming text
-            var response = await _client.SendTextMessageAsync(message);
+	            // our bot returns incoming text
+            await _client.SendKeyboardMessageAsync(new KeyboardMessage
+            {
+	            Receiver = update.Sender.Id,
+	            Text = activity.MainMenu.Text,
+	            Keyboard = (Viber.Bot.Keyboard) activity.MainMenu.Keyboard,
+	            TrackingData = "td"
+            });
 
             return Ok();
         }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
-using Keyboard.TgmKeyboard;
+using Keyboard.Factories.Generic;
 using MyBOT.Models.Session;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -42,8 +42,11 @@ namespace MyBOT.Controllers {
 					Console.WriteLine(message);
 				}
 
-				await _client.SendTextMessageAsync(chatId: update?.Message.Chat.Id, text: "Hello",
-					replyMarkup: new ReplyKeyboardMarkup(new KeyboardButton("hello")));//new InlineKeyboardMarkup(InlineKeyboardButton.WithCallbackData("Hello", "helloCallback")));
+				var activity = new Activity(new MainMenuTelegramFactory());
+
+				await _client.SendTextMessageAsync(chatId: update?.Message?.Chat.Id!, text: activity.MainMenu.Text,
+					replyMarkup: (ReplyKeyboardMarkup)activity.MainMenu.Keyboard);
+					
 				
 				return StatusCode(StatusCodes.Status200OK);
 #pragma warning disable CS0168 // Variable is declared but never used
