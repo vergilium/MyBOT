@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Main_Menu" xml:space="preserve">
+    <value>Main menu</value>
+        <comment/>
+  </data>
+    <data name="Cabinet" xml:space="preserve">
+    <value>🚪 Cabinet</value>
+        <comment/>
+  </data>
+    <data name="Newest" xml:space="preserve">
+    <value>📢 Newest</value>
+        <comment/>
+  </data>
+    <data name="Finder" xml:space="preserve">
+    <value>🔎 Finder</value>
+        <comment/>
+  </data>
+    <data name="Help" xml:space="preserve">
+    <value>❓ Help</value>
+        <comment/>
+  </data>
+    <data name="Popular" xml:space="preserve">
+    <value>🔥 Popular</value>
+        <comment/>
+  </data>
+    <data name="About" xml:space="preserve">
+    <value>🤖 About</value>
+        <comment/>
+  </data>
+    <data name="Personal_room" xml:space="preserve">
+    <value>Personal menu</value>
+        <comment/>
+  </data>
+    <data name="Bookmarks" xml:space="preserve">
+    <value>Bookmarks</value>
+        <comment/>
+  </data>
+    <data name="Favorite" xml:space="preserve">
+    <value>Favorite</value>
+        <comment/>
+  </data>
+    <data name="Recommend" xml:space="preserve">
+    <value>Recommended</value>
+        <comment/>
+  </data>
+    <data name="ToMenu" xml:space="preserve">
+    <value>To Menu</value>
+        <comment/>
+  </data>
+
+</root>

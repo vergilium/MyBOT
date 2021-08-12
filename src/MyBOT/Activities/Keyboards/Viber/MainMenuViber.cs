@@ -1,42 +1,43 @@
-﻿using Keyboard.Factories.Abstract;
+﻿using Microsoft.Extensions.Localization;
+using MyBOT.Activities.Abstract;
 using Viber.Bot;
 
-namespace Keyboard.Factories.Keyboards.Viber{
+namespace MyBOT.Activities.Keyboards.Viber{
     public class MainMenuViber: IActivityViber{
         public string Text{ get; private init; }
         public object Keyboard{ get; private init; }
         
-        public MainMenuViber(){
-            Text = "== Главное меню ==";
+        public MainMenuViber(IStringLocalizer<SharedResource> sharedLocalizer){
+            Text = sharedLocalizer["Main_Menu"];
             Keyboard = new global::Viber.Bot.Keyboard{
                 Buttons = new[]{
                     new KeyboardButton{
-                        Text = "🚪Кабинет",
+                        Text = sharedLocalizer["Cabinet"],
                         ActionBody = "Cabinet",
                         Columns = 2
                     },
                     new KeyboardButton{
-                        Text = "📢Новинки",
-                        ActionBody = "newest",
+                        Text = sharedLocalizer["Newest"],
+                        ActionBody = "Newest",
                         Columns = 2
                     },
                     new KeyboardButton{
-                        Text = "🔎Поиск",
-                        ActionBody = "finder",
+                        Text = sharedLocalizer["Finder"],
+                        ActionBody = "Finder",
                         Columns = 2
                     },
                     new KeyboardButton{
-                        Text = "❓Помощь",
-                        ActionBody = "help",
+                        Text = sharedLocalizer["Help"],
+                        ActionBody = "Help",
                         Columns = 2
                     },
                     new KeyboardButton{
-                        Text = "🔥Популятное",
-                        ActionBody = "popular",
+                        Text = sharedLocalizer["Popular"],
+                        ActionBody = "Popular",
                         Columns = 2
                     },
                     new KeyboardButton{
-                        Text = "🤖О боте",
+                        Text = sharedLocalizer["About"],
                         ActionBody = "about",
                         Columns = 2
                     }

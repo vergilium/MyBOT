@@ -5,7 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
-using Keyboard.Factories.Generic;
+using Microsoft.Extensions.Localization;
+using MyBOT.Activities.Generic;
 using Viber.Bot;
 using ViberAPI;
 using Keyboard = Viber.Bot.Keyboard;
@@ -14,9 +15,11 @@ namespace MyBOT.Controllers {
 	[Route("/api/[controller]")]
 	public class ViberController : ControllerBase {
 		private readonly IViberBotClient _client;
+		private readonly IStringLocalizer<SharedResource> _stringLocalizer;
 
-		public ViberController(ViberbotClient client) {
+		public ViberController(ViberbotClient client, IStringLocalizer<SharedResource> stringLocalizer) {
 			_client = client.client;
+			_stringLocalizer = stringLocalizer;
 		}
 
 		[HttpGet]
@@ -43,7 +46,7 @@ namespace MyBOT.Controllers {
                 default: return NoContent();
             }
 
-            var activity = new Activity(new MainMenuViberFactory());
+            var activity = new Activity(new MainMenuViberFactory(), _stringLocalizer);
 
 	            // our bot returns incoming text
             await _client.SendKeyboardMessageAsync(new KeyboardMessage

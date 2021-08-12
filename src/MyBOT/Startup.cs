@@ -8,8 +8,10 @@ using Microsoft.Extensions.Logging;
 using MyBOT.Services;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Localization;
 using TelegramAPI;
 using ViberAPI;
 
@@ -30,10 +32,25 @@ namespace MyBOT {
 			services.Configure<ViberAPI.BotSettings>(Configuration.GetSection(ViberAPI.BotSettings.botOptions));
 			services.AddViberbotService();
 			
+			services.AddLocalization(options => options.ResourcesPath = "Resources");
+			services.Configure<RequestLocalizationOptions>(options => {
+				var supportedCultures = new[]{
+					new CultureInfo("ru"),
+					new CultureInfo("ua"),
+					new CultureInfo("en")
+				};
+				options.DefaultRequestCulture = new RequestCulture("en");
+				options.SupportedCultures = supportedCultures;
+			});
+			
 			services.AddBotSession();
 
 			services.AddControllers()
-				.AddNewtonsoftJson();
+				.AddNewtonsoftJson()
+				.AddDataAnnotationsLocalization(options => {
+					options.DataAnnotationLocalizerProvider = (type, factory) => 
+						factory.Create(typeof(SharedResource));
+				});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +59,7 @@ namespace MyBOT {
 				app.UseDeveloperExceptionPage();
 			}
 
+			app.UseRequestLocalization();
 			app.UseRouting();
 			//app.UseAuthorization();
 

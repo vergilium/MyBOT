@@ -1,6 +1,4 @@
-﻿using Viber.Bot;
-
-namespace Keyboard.Factories.Abstract{
+﻿namespace MyBOT.Activities.Abstract{
     public interface IActivityViber: IActivity{
         
     }

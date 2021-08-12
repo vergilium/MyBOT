@@ -2,10 +2,13 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
-using Keyboard.Factories.Generic;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Localization;
+using MyBOT.Activities.Generic;
 using MyBOT.Models.Session;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -18,10 +21,12 @@ namespace MyBOT.Controllers {
 	public class TelegramController : ControllerBase {
 		private readonly ITelegramBotClient _client;
 		private readonly IBotSession _botSession;
+		private readonly IStringLocalizer<SharedResource> _stringLocalizer;
 
-		public TelegramController(ITelebotClient client, IBotSession botSession) {
+		public TelegramController(ITelebotClient client, IBotSession botSession, IStringLocalizer<SharedResource> sharedLocalizer) {
 			_client = client.Client;
 			_botSession = botSession;
+			_stringLocalizer = sharedLocalizer;
 		}
 
 		[HttpPost]
@@ -41,8 +46,9 @@ namespace MyBOT.Controllers {
 				if (message != null) {
 					Console.WriteLine(message);
 				}
-
-				var activity = new Activity(new MainMenuTelegramFactory());
+				
+				
+				var activity = new Activity(new MainMenuTelegramFactory(), _stringLocalizer);
 
 				await _client.SendTextMessageAsync(chatId: update?.Message?.Chat.Id!, text: activity.MainMenu.Text,
 					replyMarkup: (ReplyKeyboardMarkup)activity.MainMenu.Keyboard);
